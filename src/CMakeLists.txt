@@ -18,6 +18,32 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 # Set the output directory for binaries
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 
+# Include directories
+include_directories(
+    "${CMAKE_SOURCE_DIR}"  # Assuming ${workspaceFolder} is the source directory
+    "C:/Program Files (x86)/TCI/Scorpio API/Release/Common"
+    "C:/Program Files (x86)/TCI/Scorpio API/Release/GShared/IO"
+    "C:/Program Files (x86)/TCI/Scorpio API/Release/GShared/Monitoring System/Shared Include"
+    "C:/Program Files (x86)/TCI/Scorpio API/Release/lib"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/include"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/include/cvt"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/include/msclr"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src/x64"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src/concrt"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src/linkopts"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src/stl"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src/vccorlib"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/crt/src/vcruntime"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/atlmfc/src/mfc"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/atlmfc/src/atl"
+    "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/atlmfc/include"
+    "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/ucrt"
+    "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared"
+    "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um",
+    "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/winrt"
+)
+
 # Custom target to generate debug script
 add_custom_target(generate_debug_script
     COMMAND ${CMAKE_COMMAND} -E echo "set(CMAKE_BUILD_TYPE Debug)" > ${CMAKE_BINARY_DIR}/debug.cmake
