@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5.0)
 
-set(PRJ_NAME "CPPBP")
+set(PRJ_NAME "MIAerConn")
 
 project(${PRJ_NAME} VERSION 0.1.0 LANGUAGES C CXX)
 
@@ -14,6 +14,9 @@ add_executable(${PRJ_NAME} main.cpp)
 # Set compiler flags for different build types
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+
+# Set the output directory for binaries
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 
 # Custom target to generate debug script
 add_custom_target(generate_debug_script

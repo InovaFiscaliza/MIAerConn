@@ -20,7 +20,7 @@
                 "-B",
                 "${workspaceFolder}/build",
                 "-S",
-                "${workspaceFolder}"
+                "${workspaceFolder}/src",
             ],
             "problemMatcher": []
         },

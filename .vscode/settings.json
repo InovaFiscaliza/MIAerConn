@@ -21,5 +21,6 @@
             "statusBarVisibility": "inherit",
             "inheritDefault": "visible"
         }
-    }
+    },
+    "cmake.sourceDirectory": "D:/Projects/MIAerConn/src"
 }
